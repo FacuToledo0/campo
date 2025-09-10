@@ -1,0 +1,17 @@
+# Django framework
+Django>=4.2,<5.0
+
+# Manejo de imágenes
+Pillow>=10.0.0
+
+# Para variables de entorno (.env)
+python-decouple>=3.8
+
+# Para base de datos PostgreSQL (si usás sqlite no hace falta)
+psycopg2-binary>=2.9.9
+
+# Extensiones útiles de Django (ej: shell_plus, mejoras en queries, etc.)
+django-extensions>=3.2.3
+
+# Opcional: si querés subir a producción con Gunicorn (Linux servers)
+gunicorn>=21.2.0
