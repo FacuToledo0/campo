@@ -1,0 +1,27 @@
+<!-- propiedades/templates/propiedades/lista_campos.html -->
+
+{% extends 'propiedades/base.html' %}
+
+{% block title %}Campos en Venta - Campos del Sur{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Campos en venta</h1>
+
+<div class="row">
+    {% for campo in campos %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <img src="{{ campo.imagen.url }}" class="card-img-top" alt="{{ campo.titulo }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ campo.titulo }}</h5>
+                <p class="card-text">{{ campo.descripcion }}</p>
+                <p class="card-text"><strong>Ubicación:</strong> {{ campo.ubicacion }}</p>
+                <p class="card-text"><strong>Precio:</strong> ${{ campo.precio }}</p>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No hay campos disponibles.</p>
+    {% endfor %}
+</div>
+{% endblock %}

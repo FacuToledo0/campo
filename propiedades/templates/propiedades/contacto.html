@@ -1,0 +1,17 @@
+<!-- propiedades/templates/propiedades/contacto.html -->
+
+{% extends 'propiedades/base.html' %}
+
+{% block title %}Contacto - Campos del Sur{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Contacto</h1>
+
+<p>Para consultas o más información, completá el formulario y te responderemos pronto.</p>
+
+<form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Enviar</button>
+</form>
+{% endblock %}
